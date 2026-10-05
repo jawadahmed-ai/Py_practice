@@ -1,4 +1,4 @@
-name: Run Python Program
+name: Run Python Tests
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - master
 
 jobs:
-  run-python:
+  test-python:
     runs-on: ubuntu-latest
 
     steps:
       - name: Get Code
         uses: actions/checkout@v4
 
-      - name: Run Python
-        run: python hello.py
+      - name: Run Python Test
+        run: python test_hello.py
